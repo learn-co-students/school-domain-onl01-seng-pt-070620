@@ -1,5 +1,5 @@
 # code here!
-
+require 'pry'
 class School
   
   attr_accessor :roster
@@ -27,14 +27,14 @@ class School
   end
   
   def sort 
-    @roster.collect do |key, value|
-      puts "key is #{key}"
-      puts "before #{value} "
+    sorted_hash = {}
+    @roster.each do |key, value|
+
       
       value = value.sort
+      sorted_hash[key] = value
       
-      puts "after  #{value} "
-    end
-  @roster
+      end           #ends each
+  sorted_hash
   end
 end #ends class
