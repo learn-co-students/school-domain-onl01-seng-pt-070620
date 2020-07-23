@@ -1,3 +1,4 @@
+require 'pry'
 class School
   attr_accessor :roster
   
@@ -9,15 +10,21 @@ class School
   def add_student(name, grade)
     if @roster[grade] == nil 
       @grade = grade
-      @roster[grade] = []
+      @roster[grade] = [] 
       @roster[grade] << name
-    else
-      @roster[grade] << name
+   else
+      @roster[grade] << name 
     end
   end
   
   def grade(grade)
     @grade = @roster[grade]
+  end
+  
+  def sort
+    @grade.each do |name|
+      
+    end
   end
   
 end
