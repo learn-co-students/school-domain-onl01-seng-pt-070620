@@ -22,8 +22,7 @@ class School
   end
   
   def sort
-    @grade.each do |name|
-      
+    
     end
   end
   
