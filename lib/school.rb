@@ -11,7 +11,7 @@ class School
 
 # Adds students by using grade as the key
   def add_student(student_name, grade)
-    # @roster[grade] = []
+    # @roster[grade] ||= []
     @roster[grade] << student_name
   end
 
