@@ -10,10 +10,20 @@ class School
   end
 
 # Adds students by using grade as the key
-  def add_student(student_name, grade)
-    # @roster[grade] ||= []
+  def add_student(student_name, grade)  
+    # @roster[grade] ||= []                 
     @roster[grade] << student_name
   end
+  
+  
+  #  Explain what this means up above
+#   def add_student(name, grade)
+#     @name = name  
+#     @grade = grade
+#     if @roster.include?(grade) == false 
+#       @roster[grade] = []
+#   end
+#    @roster[grade] << name
 
 # Returns class list of grade
   def grade(grade)
@@ -29,5 +39,7 @@ class School
     new_roster
   end
 
+  High_School = School.new(roster)
+  High_School.add_student("Bob", 9)
 
 end
